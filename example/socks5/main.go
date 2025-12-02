@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/chainreactors/proxyclient"
+	"github.com/kelesec/proxyclient"
 	"github.com/things-go/go-socks5"
 )
 

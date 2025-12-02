@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"time"
 
-	httpProxy "github.com/chainreactors/proxyclient/http"
-	socksProxy "github.com/chainreactors/proxyclient/socks"
+	httpProxy "github.com/kelesec/proxyclient/http"
+	socksProxy "github.com/kelesec/proxyclient/socks"
 )
 
 func init() {

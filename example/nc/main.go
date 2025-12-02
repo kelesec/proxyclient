@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/chainreactors/proxyclient"
+	"github.com/kelesec/proxyclient"
 )
 
 func main() {

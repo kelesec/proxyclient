@@ -5,7 +5,7 @@ import (
 	"hash/crc32"
 	"net"
 
-	"github.com/chainreactors/proxyclient"
+	"github.com/kelesec/proxyclient"
 )
 
 func NewHash(proxies []proxyclient.Dial) proxyclient.Dial {

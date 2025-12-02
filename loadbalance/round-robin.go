@@ -2,7 +2,7 @@ package loadbalance
 
 import (
 	"context"
-	"github.com/chainreactors/proxyclient"
+	"github.com/kelesec/proxyclient"
 	"net"
 )
 

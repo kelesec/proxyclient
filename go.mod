@@ -1,4 +1,4 @@
-module github.com/chainreactors/proxyclient
+module github.com/kelesec/proxyclient
 
 go 1.21
 
@@ -11,6 +11,7 @@ require (
 
 require (
 	github.com/andybalholm/brotli v1.1.0 // indirect
+	github.com/chainreactors/proxyclient v1.0.2-0.20250219161856-d3cb64e8a173 // indirect
 	github.com/cloudflare/circl v1.3.8 // indirect
 	github.com/go-gost/gosocks5 v0.3.0 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect

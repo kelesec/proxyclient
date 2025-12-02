@@ -10,7 +10,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/chainreactors/proxyclient"
+	"github.com/kelesec/proxyclient"
 )
 
 func main() {

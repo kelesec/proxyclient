@@ -31,7 +31,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/url"
-	"github.com/chainreactors/proxyclient"
+	"github.com/kelesec/proxyclient"
 )
 
 func main() {
@@ -195,3 +195,7 @@ neoregs://password@example.com:8443/tunnel?interval=200ms&retry=5
 
 - [GameXG/ProxyClient](https://github.com/GameXG/ProxyClient)
 - [RouterScript/ProxyClient](https://github.com/RouterScript/ProxyClient)
+
+## 补充说明
+
+此项目是在 github.com/chainreactors/proxyclient 的基础上进行构建，以便于适配自己的工具库，致敬原作者🫡🫡🫡

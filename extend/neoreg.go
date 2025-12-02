@@ -5,8 +5,8 @@ package extend
 
 import (
 	"context"
-	"github.com/chainreactors/proxyclient"
-	"github.com/chainreactors/proxyclient/neoreg"
+	"github.com/kelesec/proxyclient"
+	"github.com/kelesec/proxyclient/neoreg"
 	"net"
 	"net/url"
 )
