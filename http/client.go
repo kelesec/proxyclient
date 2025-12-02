@@ -11,6 +11,15 @@ import (
 	"strings"
 )
 
+type wrappedConn struct {
+	net.Conn
+	r *bufio.Reader
+}
+
+func (c *wrappedConn) Read(b []byte) (int, error) {
+	return c.r.Read(b)
+}
+
 type Client struct {
 	Proxy        url.URL
 	TLSConfig    *tls.Config
@@ -44,14 +53,21 @@ func (client *Client) Dial(ctx context.Context, network, address string) (conn n
 		conn.Close()
 		return
 	}
-	if response, err = http.ReadResponse(bufio.NewReader(conn), request); err != nil {
+
+	reader := bufio.NewReader(conn)
+	if response, err = http.ReadResponse(reader, request); err != nil {
 		conn.Close()
 		return
 	}
 	if response.StatusCode != http.StatusOK {
 		err = conn.Close()
 	}
-	return
+	response.Body.Close() // 直接关闭Body，避免读取数据导致 reader 指针被推进
+
+	return &wrappedConn{
+		Conn: conn,
+		r:    reader,
+	}, nil
 }
 
 func (client *Client) connect(network, address string) (conn net.Conn, err error) {

@@ -37,6 +37,7 @@ func main() {
 	// 创建SOCKS5服务器配置
 	server := socks5.NewServer(
 		socks5.WithDial(func(ctx context.Context, network, addr string) (net.Conn, error) {
+			log.Printf("connect to %s://%s", network, addr)
 			return dial(ctx, network, addr)
 		}),
 	)
